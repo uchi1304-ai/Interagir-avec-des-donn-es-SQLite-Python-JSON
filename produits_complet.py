@@ -49,7 +49,7 @@ for ligne in rows:
 # Exécuter une quatrieme requête (valeur totale du stock)
 # Connexion à la base
 
-cur.execute("SELECT *,SUM(prix * stock) AS valeur_total_stock FROM produits")
+cur.execute("SELECT SUM(prix * stock) AS valeur_total_stock FROM produits")
 rows= cur.fetchall()
 
 # Récupérer les noms de colonnes
